@@ -1,5 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style-type: none;
+}
+
 .App {
   text-align: center;
+  background-color: #282c34;
+  padding: 30px 0 0 0;
 }
 
 .App-logo {
@@ -15,11 +25,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - 30px);
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -35,4 +47,55 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.list {
+  width: 100%;
+  padding: 0;
+}
+
+.list-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list-item-checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.list-item-text {
+  display: flex;
+  align-items: center;
+}
+
+.list-item-btn {
+  width: 30px;
+  height: 30px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input {
+  flex-grow: 1;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.form-btn {
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
 }
